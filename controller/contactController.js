@@ -9,8 +9,9 @@ const expressAsyncHandler = require("express-async-handler")
 
 const getContacts = expressAsyncHandler(async (req, res) => {
   const contacts = await Contact.find();
-  res.status(200).json(contacts);
+  res.status(200).json({ data: contacts }); // Wrap the contacts array in a 'data' property
 });
+
 
 // @desc Create New contact
 // @route POST /api/contacts

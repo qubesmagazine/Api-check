@@ -9,7 +9,7 @@ const dotenv = require("dotenv").config()
 connectDB()
 const app = express();
 
-const port = process.env.PORT || 5000;
+const port = 5001;
 
 
 // middleware
